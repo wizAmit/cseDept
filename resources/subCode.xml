@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subjects>
+	<sem id="1">
+		<subCode1 id="HU101" elective="no">
+			<name>English Language & Technical Communication</name>
+			<credit>2</credit>
+		</subCode1>
+		<subCode2 id="PH101" elective="no">
+			<name>Physics I</name>
+			<credit>4</credit>
+		</subCode2>
+		<subCode3 id="M101" elective="no">
+			<name>Mathematics I</name>
+			<credit>4</credit>
+		</subCode3>
+		<subCode4 id="ES101" elective="no">
+			<name>Basic Electrical And Electronics Engineering I</name>
+			<credit>4</credit>
+		</subCode4>
+		<subCode5 id="ME101" elective="no">
+			<name>Engineering Mechanics</name>
+			<credit>4</credit>
+		</subCode5>
+		<labCode1 id="PH191" elective="no">
+			<name>Physics I Lab</name>
+			<credit>2</credit>
+		</labCode1>
+		<labcode2 id="ES191" elective="no">
+			<name>Basic Electrical And Electronics Engineering I Lab</name>
+			<credit>2</credit>
+		</labcode2>
+		<labCode3 id="ME192" elective="no">
+			<name>Workshop Practice Lab</name>
+			<credit>3</credit>
+		</labCode3>
+		<labCode4 id="HU181" elective="no">
+			<name>Language Lab</name>
+			<credit>1</credit>
+		</labCode4>
+		<labCode5 id="XC181" elective="no">
+			<name>Extra Curricular Activities (NSS/NCC/NSO etc.)</name>
+			<credit>1</credit>
+		</labCode5>
+	</sem>
+	<sem id="2">
+		<subCode1 id="CS201" elective="no">
+			<name>Basic Computation & Principles of Computer Programming</name>
+			<credit>4</credit>
+		</subCode1>
+		<subCode2 id="PH201/CH201" elective="no">
+			<name>Chemistry I</name>
+			<credit>4</credit>
+		</subCode2>
+		<subCode3 id="M201" elective="no">
+			<name>Mathematics II</name>
+			<credit>4</credit>
+		</subCode3>
+		<subCode4 id="ES201" elective="no">
+			<name>Basic Electrical And Electronics Engineering II</name>
+			<credit>4</credit>
+		</subCode4>
+		<subCode5 id="ME201" elective="no">
+			<name>Engineering Thermodynamics & Fluid Mechanics</name>
+			<credit>4</credit>
+		</subCode5>
+		<labCode1 id="CS291" elective="no">
+			<name>Basic Computation & Principles of Computer Programming Lab</name>
+			<credit>2</credit>
+		</labCode1>
+		<labcode2 id="PH291/CH291" elective="no">
+			<name>Chemistry I Lab</name>
+			<credit>2</credit>
+		</labcode2 >
+		<labCode3 id="ES291" elective="no">
+			<name>Basic Electrical & Electronics Engineering II Lab</name>
+			<credit>2</credit>
+		</labCode3>
+		<labCode4 id="ME291/ME292" elective="no">
+			<name>Basic Engineering Drawing & Computer Graphics</name>
+			<credit>3</credit>
+		</labCode4>
+	</sem>
+	<sem id="3">
+		<subCode1 id="HU301" elective="no">
+			<name>Values & Ethics in profession</name>
+			<credit>3</credit>
+		</subCode1>
+		<subCode2 id="PH301" elective="no">
+			<name>Physics II</name>
+			<credit><4/credit>
+		</subCode2>
+		<subCode3 id="CH301" elective="no">
+			<name>Basic Environmental Engineering & Elementary Biology</name>
+			<credit>3</credit>
+		</subCode3>
+		<subCode4 id="CS301" elective="no">
+			<name>Analog & Digital Electronics</name>
+			<credit>3</credit>
+		</subCode4>
+		<subCode5 id="CS302" elective="no">
+			<name>Data Structures and Algorithm</name>
+			<credit>4</credit>
+		</subCode5>
+		<labCode1 id="CS303" elective="no">
+			<name>Computer Organisation</name>
+			<credit>4</credit>
+		</labCode1>
+		<labcode2 id="PH391" elective="no">
+			<name>Physics II Lab</name>
+			<credit>2</credit>
+		</labcode2>
+		<labCode3 id="CS391" elective="no">
+			<name>Analog & Digital Electronics Lab</name>
+			<credit>2</credit>
+		</labCode3>
+		<labCode4 id="CS392" elective="no">
+			<name>Data structures and Algorithm Lab</name>
+			<credit>2</credit>
+		</labCode4>
+		<labCode5 id="CS393" elective="no">
+			<name>Computer Organisation Lab</name>
+			<credit>2</credit>
+		</labCode5>
+	</sem>
+	<sem id="4">
+		<subCode1 id="M401" elective="no">
+			<name>Mathematics III</name>
+			<credit>4</credit>
+		</subCode1>
+		<subCode2 id="CS401" elective="no">
+			<name>Communication Engineering and Coding Theory</name>
+			<credit>3</credit>
+		</subCode2>
+		<subCode3 id="CS402" elective="no">
+			<name>Formal Language & Automata Theory</name>
+			<credit>4</credit>
+		</subCode3>
+		<subCode4 id="CS403" elective="no">
+			<name>Computer Architecture</name>
+			<credit>4</credit>
+		</subCode4>
+		<subCode5 id="" elective="no">
+			<name></name>
+			<credit></credit>
+		</subCode5>
+		<labCode1 id="HU481" elective="no">
+			<name>Technical report writing and language Lab Practice</name>
+			<credit>2</credit>
+		</labCode1>
+		<labcode2 id="MCS491" elective="no">
+			<name>Numerical Method Lab</name>
+			<credit>1</credit>
+		</labcode2>
+		<labCode3 id="CS491" elective="no">
+			<name>Communication Engineering & Coding Theory</name>
+			<credit>2</credit>
+		</labCode3>
+		<labCode4 id="CS492" elective="no">
+			<name>Software Tools Lab</name>
+			<credit>2</credit>
+		</labCode4>
+		<labCode5 id="CS493" elective="no">
+			<name>Computer Architecture Lab</name>
+			<credit>2</credit>
+		</labCode5>
+	</sem>
+	<sem id="5">
+		<subCode1 id="HU501 " elective="no">
+			<name>Economics for Engineers</name>
+			<credit>3</credit>
+		</subCode1>
+		<subCode2 id="CS501 " elective="no">
+			<name>Design and Analysis of Algorithm</name>
+			<credit>4</credit>
+		</subCode2>
+		<subCode3 id="CS502 " elective="no">
+			<name>Microprocessors And MicroControllor</name>
+			<credit>4</credit>
+		</subCode3>
+		<subCode4 id="CS503 " elective="no">
+			<name>Discrete Mathematics</name>
+			<credit>3</credit>
+		</subCode4>
+		<subCode5 id="CS504D" elective="no">
+			<name>Object oriented Programming</name>
+			<credit>4</credit>
+		</subCode5>
+		<labCode1 id="CS591 " elective="no">
+			<name>Design And Analysis of Algorithm Lab</name>
+			<credit>2</credit>
+		</labCode1>
+		<labcode2 id="CS592 " elective="no">
+			<name>Microprocessors and Microcontrollor Lab</name>
+			<credit>2</credit>
+		</labcode2>
+		<labCode3 id="CS593" elective="no">
+			<name>Programming Practices using C++</name>
+			<credit>2</credit>
+		</labCode3>
+		<labCode4 id="CS594D" elective="no">
+			<name>Object Oriented Programming Lab</name>
+			<credit>2</credit>
+		</labCode4>
+	</sem>
+	<sem id="6">
+		<subCode1 id="HU601" elective="no">
+			<name>Principles of Management</name>
+			<credit>2</credit>
+		</subCode1>
+		<subCode2 id="CS601" elective="no">
+			<name>Database Management System</name>
+			<credit>3</credit>
+		</subCode2>
+		<subCode3 id="CS602" elective="no">
+			<name>Computer Networks</name>
+			<credit>3</credit>
+		</subCode3>
+		<subCode4 id="CS603" elective="no">
+			<name>Operating System</name>
+			<credit>3</credit>
+		</subCode4>
+		<subCode5 id="CS604B" elective="no">
+			<name>Computer Graphics</name>
+			<credit>3</credit>
+		</subCode5>
+		<subCode6 id="CS605A" elective="no">
+			<name>Operation Research</name>
+			<credit>4</credit>
+		</subCode6>
+		<labCode1 id="CS691" elective="no">
+			<name>Database Management System Lab</name>
+			<credit>2</credit>
+		</labCode1>
+		<labcode2 id="CS692" elective="no">
+			<name>Computer Network Lab</name>
+			<credit>2</credit>
+		</labcode2>
+		<labCode3 id="CS693" elective="no">
+			<name>Operating System Lab</name>
+			<credit>2</credit>
+		</labCode3>
+		<labCode4 id="CS681" elective="no">
+			<name>Seminar</name>
+			<credit>2</credit>
+		</labCode4>
+	</sem>
+	<sem id="7">
+		<subCode1 id="CS701" elective="no">
+			<name>Software Engineering</name>
+			<credit>3</credit>
+		</subCode1>
+		<subCode2 id="CS702" elective="no">
+			<name>Compiler Design</name>
+			<credit>3</credit>
+		</subCode2>
+		<subCode3 id="CS703C" elective="no">
+			<name>Artificial Intelligence</name>
+			<credit>3</credit>
+		</subCode3>
+		<subCode4 id="CS704A" elective="no">
+			<name>Distributed Operating System</name>
+			<credit>3</credit>
+		</subCode4>
+		<subCode5 id="CS705A" elective="no">
+			<name>Internet Technology</name>
+			<credit>3</credit>
+		</subCode5>
+		<labCode1 id="HU781" elective="no">
+			<name>Group Discussion</name>
+			<credit>2	</credit>
+		</labCode1>
+		<labcode2 id="CS791" elective="no">
+			<name>Software Engineering Lab</name>
+			<credit>2</credit>
+		</labcode2>
+		<labCode3 id="CS793C" elective="no">
+			<name>Artificial Intelligence Lab</name>
+			<credit>2</credit>
+		</labCode3>
+		<labCode4 id="CS795A" elective="no">
+			<name>Internet Technology</name>
+			<credit>2</credit>
+		</labCode4>
+		<labCode5 id="CS792" elective="no">
+			<name>Industrial Training</name>
+			<credit>2</credit>
+		</labCode5>
+		<labCode6 id="CS794" elective="no">
+			<name>Project - 1</name>
+			<credit>2</credit>
+		</labCode5>
+	</sem>
+	<sem id="8">
+		<subCode1 id="" elective="no">
+			<name></name>
+			<credit></credit>
+		</subCode1>
+		<subCode2 id="" elective="no">
+			<name></name>
+			<credit></credit>
+		</subCode2>
+		<subCode3 id="" elective="no">
+			<name></name>
+			<credit></credit>
+		</subCode3>
+		<subCode4 id="" elective="no">
+			<name></name>
+			<credit></credit>
+		</subCode4>
+		<subCode5 id="" elective="no">
+			<name></name>
+			<credit></credit>
+		</subCode5>
+		<labCode1 id="" elective="no">
+			<name></name>
+			<credit></credit>
+		</labCode1>
+		<labcode2 id="" elective="no">
+			<name></name>
+			<credit></credit>
+		</labcode2>
+		<labCode3 id="" elective="no">
+			<name></name>
+			<credit></credit>
+		</labCode3>
+		<labCode4 id="" elective="no">
+			<name></name>
+			<credit></credit>
+		</labCode4>
+		<labCode5 id="" elective="no">
+			<name></name>
+			<credit></credit>
+		</labCode5>
+	</sem>
+</subjects>
