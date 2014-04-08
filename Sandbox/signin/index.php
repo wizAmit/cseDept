@@ -84,7 +84,7 @@ else
     <head>
         <title>Sign in with Google</title>
 
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" name="viewport" content="width=device-width" />
 
         <style type="text/css">
             table
