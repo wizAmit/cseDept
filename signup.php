@@ -12,10 +12,10 @@
 	echo (APP_NAME . "\n");
 	$client = new Google_Client();
   	$client->setApplicationName(APP_NAME);
-  	$client->setDeveloperKey($developerCreds['Google']['developer_key']);
-	$client->setClientId($developerCreds['Google']['client_id']);
-	$client->setClientSecret($developerCreds['Google']['client_secret']);
-	$client->setRedirectUri($developerCreds['Google']['redirect_uris']);
+  	$client->setDeveloperKey($developerCreds['Google_localhost']['developer_key']);
+	$client->setClientId($developerCreds['Google_localhost']['client_id']);
+	$client->setClientSecret($developerCreds['Google_localhost']['client_secret']);
+	$client->setRedirectUri($developerCreds['Google_localhost']['redirect_uris']);
 	$client->setScopes(array('https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/plus.me'));
 
 	// if request is to logout then do it and redirect

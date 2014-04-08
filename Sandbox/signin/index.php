@@ -2,9 +2,9 @@
 // google api data
 // goto https://console.developers.google.com to get one
 
-$google_client_id = '730957649338.apps.googleusercontent.com';
-$google_client_secret = 'YzOORzO4u41pVr7mTGu13Sc2';
-$google_redirect_url = 'http://localhost/cseDept/Sandbox/signin/';
+$google_client_id = '730957649338-1nc6g79g20qcthp42hfgtslq17rv8dkb.apps.googleusercontent.com';
+$google_client_secret = 'v0A9SbFflARWkRUMfiXznfOO';
+$google_redirect_url = 'https://csedept-wiz.rhcloud.com/Sandbox/signin/';
 $google_developer_key = 'AIzaSyClgERWIYvWLqG228vLUldNugc3LKImpdA';
 
 // required files

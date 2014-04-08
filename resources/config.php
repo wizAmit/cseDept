@@ -63,14 +63,20 @@ error_reporting(E_ALL|E_STRCT);
 
 define("APP_NAME","CSE DEPT");
 $developerCreds = array(
-	"Google" => array(
+	"Google_localhost" => array(
 		"developer_key" => "AIzaSyClgERWIYvWLqG228vLUldNugc3LKImpdA",
 		"client_id" => "730957649338.apps.googleusercontent.com",
 		"client_secret" => "YzOORzO4u41pVr7mTGu13Sc2",
 		"redirect_uris" => "http://localhost/cseDept/signup.php",
 		"api_key" => "AIzaSyClgERWIYvWLqG228vLUldNugc3LKImpdA"		
 	),
-	"Facebook" => array()
+	"Google_rhcloud" => array(
+		"developer_key" => "AIzaSyClgERWIYvWLqG228vLUldNugc3LKImpdA",
+		"client_id" => "730957649338-1nc6g79g20qcthp42hfgtslq17rv8dkb.apps.googleusercontent.com",
+		"client_secret" => "v0A9SbFflARWkRUMfiXznfOO",
+		"redirect_uris" => "https://csedept-wiz.rhcloud.com/Sandbox/signin/",
+		"api_key" => "AIzaSyClgERWIYvWLqG228vLUldNugc3LKImpdA"
+	)
 );
  
 ?>
