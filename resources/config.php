@@ -67,7 +67,7 @@ $developerCreds = array(
 		"developer_key" => "AIzaSyClgERWIYvWLqG228vLUldNugc3LKImpdA",
 		"client_id" => "730957649338.apps.googleusercontent.com",
 		"client_secret" => "YzOORzO4u41pVr7mTGu13Sc2",
-		"redirect_uris" => "http://localhost/cseDept/signup.php",
+		"redirect_uris" => "https://localhost/cseDept/signup.php",
 		"api_key" => "AIzaSyClgERWIYvWLqG228vLUldNugc3LKImpdA"		
 	),
 	"Google_rhcloud" => array(

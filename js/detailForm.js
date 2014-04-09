@@ -13,6 +13,10 @@ var yearXII = document.getElementById("XpassingYr");
 //var entrance = document.getElementByName("entranceExam");
 var rank = document.getElementById("rank");
 
+$("#subForms").onload() {
+	.fadeIn("slow");
+}
+
 function loadedDiv() {
 	"use strict";
 	

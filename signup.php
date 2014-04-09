@@ -3,6 +3,12 @@
 	require_once ( '\contrib\Google_Oauth2Service.php');
 	require_once ( '.\resources\config.php');	
 	
+	
+	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) 
+		ob_start("ob_gzhandler"); 
+	else 
+		ob_start();
+
 	//start session
 	session_start();
 
@@ -82,6 +88,7 @@
 		<meta name="viewport" content="width=device-width">
 		<script type="text/javascript" src="js/detailForm.js"></script>
 		<link rel="stylesheet" type="text/css" href="./css/form.css" />
+		<script type="text/javascript" src="resources/library/jquery-1.11.0.min.js"></script>
 	</head>
 	<body>
 		<?php if($auth_url) : ?>
@@ -89,7 +96,7 @@
 			<div>
 				<input type="number" min="11500110000" step="1" id="UnivRoll" name="UniversityRollNo" pattern="\d{10,11}" 
 			   		title="Your 11 digit University Roll Number" placeholder="University Roll Number" maxlength="11" required 
-					   onchange="setCookie()" autofocus>
+					   onblur="setCookie()" autofocus>
 			</div>
 			<div>
 				<a class="login" href="<?php echo ($auth_url); ?>"><img src="img/google-login-button.png" alt="Sign in with Google" /></a>
@@ -116,7 +123,7 @@
 					</tr>
 				</table>
 			</div>
-			<div onload="loadedDiv()">
+			<div id="subForms" >
 				<div id="previous">
 					<a href="">Previous</a>
 				</div>
@@ -128,6 +135,7 @@
 			<?php endif; ?>
 		<script>
 			function setCookie() {	
+				var univRoll = $("#UnivRoll");
 				document.cookie = "univRoll=" + univRoll.value + ";";
 			}
 		</script>
