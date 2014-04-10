@@ -92,7 +92,7 @@
 					   onchange="setCookie()" autofocus>
 			</div>
 			<div>
-				<a class="login" href="<?php echo ($auth_url); ?>"><img src="img/google-login-button.png" alt="Sign in with Google" /></a>
+				<a class="login" href="<?php echo $auth_url; ?>"><img src="img/google-login-button.png" alt="Sign in with Google" /></a>
 			</div>
 		</div>
 		<?php else : ?>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>Attendance</title>
+	<script src="../resources/library/jquery-1.11.0.min.js"></script>
 </head>
 <body>
 	<div id="option">
@@ -18,9 +19,9 @@
 							document.write( "<option name='sem' value='"+i+"'>" + i + "</option>");
 				</script>
 			</select>
-			<section id="sec">
-				A: <input id = "chkA" name = "a" type = "checkbox" value = "A" onclick="changeLbl()"  /> 
-				B: <input id = "chkB" name = "b" type = "checkbox" value = "B" onclick="changeLbl()" />
+			<section id="sec" onclick="displayRoll()">
+				A: <input id = "chkA" name = "section" type = "checkbox" value = "A" /> 
+				B: <input id = "chkB" name = "section" type = "checkbox" value = "B" />
 			</section>
 			<button onclick="displayRoll()">GO</button>
 		</form>
@@ -38,50 +39,24 @@
 	</div>
 	<div id="ajaxRes">Here comes the result.</div>	
 	<script>
-		var chkA = document.getElementById("chkA");
-		var chkB = document.getElementById("chkB");
-		var lblRoll = document.getElementById("rollNumber");
-		var sem = document.getElementById("sem");
-		function changeLbl(){
-			if(chkA.checked || chkB.checked){
-				lblRoll.innerHTML = "You selected Sem: " + sem.value + " and Section: " + ((chkA.checked)? ((chkB.checked)? "A&B" : "A") : "B");
-			} else {
-				lblRoll.innerHTML = "Please Select a Section.";
-			}
-			
-		}
-		var displayRoll = function(){
-			var xhr = new XMLHttpRequest();  
-			 if (window.XMLHttpRequest) { // Mozilla, Safari,
-				  xhr = new XMLHttpRequest();
-				} else if (window.ActiveXObject) { // IE
-				  try {
-					xhr = new ActiveXObject("Msxml2.XMLHTTP");
-				  } 
-				  catch (e) {
-					try {
-					  xhr = new ActiveXObject("Microsoft.XMLHTTP");
-					} 
-					catch (e) {}
-				  }
-				} 
-			//var data = 'sem=' + sem.value + '&sec=' + ((chkA.checked)? ((chkB.checked)? "" : "A") : "B");
-			xhr.onreadystatechange = displayResponse; 
-			xhr.open("POST", "queryExeAttn.php");   
-			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                    
-			xhr.send('sem='+ encodeURIComponent(sem.value) + '&sec=' + encodeURIComponent((chkA.checked)? ((chkB.checked)? "" : "A") : "B"));
-			 
-			 function displayResponse(){
-			 	if(xhr.readyState == 4){
-				   if (xhr.status === 200){
-					var ajaxDisplay = document.getElementById('ajaxRes');
-					var result = JSON.parse(xhr.responseText);
-					ajaxDisplay.innerHTML = xhr.responseText;
-				} else {  
-					alert('There was a problem with the request.');  
-				}  
-			}
-		}
+		var section;
+		var displayRoll = function(){		
+			section = "";
+			$("input[name=section]:checked").each(function(){
+					section += ($(this).val());
+			});
+			$('#ajaxRes').html("Sem: " + $("#sem").val() + "Sec: " + section);
+			$.post("queryExeAttn.php", {"sem" : $("#sem").val(), "sec" : section }, function(data){
+				var roll = $.parseJSON(data);
+  				$.each(roll, function() {
+      				$("#ajaxRes").html(roll);
+				});
+				;
+//				var studentsRoll = $.parseJSON(data);
+				/*$.each(data,function(){
+					$("#ajaxRes").html(data);
+				});*/
+			  });
   	}
 	</script>
 	
