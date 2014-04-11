@@ -9,7 +9,6 @@
 	//sessionkey to identify google token
 	$token_key = 'google_user_token';
 
-	echo (APP_NAME . "\n");
 	$client = new Google_Client();
   	$client->setApplicationName(APP_NAME);
   	$client->setDeveloperKey($developerCreds['Google_localhost']['developer_key']);
@@ -17,6 +16,7 @@
 	$client->setClientSecret($developerCreds['Google_localhost']['client_secret']);
 	$client->setRedirectUri($developerCreds['Google_localhost']['redirect_uris']);
 	$client->setScopes(array('https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/plus.me'));
+	$google_redirect_url = $developerCreds['Google_localhost']['redirect_uris'];
 
 	// if request is to logout then do it and redirect
 	if (isset($_REQUEST['logout']))
@@ -37,7 +37,7 @@
 
 		$_SESSION[$token_key] = $client->getAccessToken();
 
-		//header('Location: ' . filter_var($google_redirect_url, FILTER_SANITIZE_URL));
+		header('Location: ' . filter_var($google_redirect_url, FILTER_SANITIZE_URL));
 
 		exit;
 	}
@@ -82,8 +82,10 @@
 		<meta name="viewport" content="width=device-width">
 		<script type="text/javascript" src="js/detailForm.js"></script>
 		<link rel="stylesheet" type="text/css" href="./css/form.css" />
+		<script src="./resources/library/jquery-1.11.0.min.js"></script>
 	</head>
 	<body>
+		<?php echo (APP_NAME . "\n"); ?>
 		<?php if($auth_url) : ?>
 		<div>	
 			<div>
@@ -127,8 +129,9 @@
 			</div>
 			<?php endif; ?>
 		<script>
+			univRoll = $("#UnivRoll");
 			function setCookie() {	
-				document.cookie = "univRoll=" + univRoll.value + ";";
+				document.cookie = "univRoll=" + univRoll.val() + ";";
 			}
 		</script>
 	</body>

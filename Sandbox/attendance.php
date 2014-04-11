@@ -23,7 +23,7 @@
 				A: <input id = "chkA" name = "section" type = "checkbox" value = "A" /> 
 				B: <input id = "chkB" name = "section" type = "checkbox" value = "B" />
 			</section>
-			<button onclick="displayRoll()">GO</button>
+			<button type="button" onclick="displayRoll()">GO</button>
 		</form>
 	</div>
 	<div id="container" class="center-window">
@@ -47,17 +47,10 @@
 			});
 			$('#ajaxRes').html("Sem: " + $("#sem").val() + "Sec: " + section);
 			$.post("queryExeAttn.php", {"sem" : $("#sem").val(), "sec" : section }, function(data){
-				var roll = $.parseJSON(data);
-  				$.each(roll, function() {
-      				$("#ajaxRes").html(roll);
-				});
-				;
-//				var studentsRoll = $.parseJSON(data);
-				/*$.each(data,function(){
-					$("#ajaxRes").html(data);
-				});*/
+  				for (var i=0 ; i<data.length; i++)
+					$('#ajaxRes').append(data[i] + '<br />');
 			  });
-  	}
+  		}
 	</script>
 	
 </body>

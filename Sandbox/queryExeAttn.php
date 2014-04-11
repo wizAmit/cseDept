@@ -2,6 +2,7 @@
 	$dsn = 'mysql:host=localhost;dbname=student_details';
 	//echo $dsn;
 
+	header('Content-Type: application/json');
 	$user='root';
 	$pass='project';
 	$db = new PDO($dsn, $user, $pass, array(PDO::ATTR_EMULATE_PREPARES=>false,
@@ -10,8 +11,8 @@
 		Portion of query processing used for attendance page 	
 																*/
 
-	echo "\n\n:: Data received via POST ::\n\n";
-	print_r($_POST);
+	/*echo "\n\n:: Data received via POST ::\n\n";
+	print_r($_POST);*/
 	$sem = $_POST['sem'];
 	$section = $_POST['sec'];
 	//print ($sem . " " . $section);
