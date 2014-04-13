@@ -19,11 +19,11 @@
 							document.write( "<option name='sem' value='"+i+"'>" + i + "</option>");
 				</script>
 			</select>
-			<section id="sec" onclick="displayRoll()">
+			<section id="sec">
 				A: <input id = "chkA" name = "section" type = "checkbox" value = "A" /> 
 				B: <input id = "chkB" name = "section" type = "checkbox" value = "B" />
 			</section>
-			<button type="button" onclick="displayRoll()">GO</button>
+			<button type="button" onclick="displayRoll">GO</button>
 		</form>
 	</div>
 	<div id="container" class="center-window">
@@ -33,13 +33,16 @@
 				<label id="rollNumber">
 					Please Select a section or both.
 				</label>
+				<input type="checkbox" id="present" hidden="true" />
 			</form>
 		</div>
 		<button id="next" onclick="next()" style="display:inline-block;">Next</button>
 	</div>
 	<div id="ajaxRes">Here comes the result.</div>	
 	<script>
+		var attendance = new Object();
 		var section;
+		var loopIndex = 0;
 		var displayRoll = function(){		
 			section = "";
 			$("input[name=section]:checked").each(function(){
@@ -47,10 +50,30 @@
 			});
 			$('#ajaxRes').html("Sem: " + $("#sem").val() + "Sec: " + section);
 			$.post("queryExeAttn.php", {"sem" : $("#sem").val(), "sec" : section }, function(data){
-  				for (var i=0 ; i<data.length; i++)
-					$('#ajaxRes').append(data[i] + '<br />');
+				$("#present").data("hidden",false);
+				takeAttendance();
+  				var takeAttendance = function(){
+					var roll = data[loopIndex];
+					$('#rollNumber').html(roll);
+					if(attendance[roll])
+						$('#present').checked= true;
+					else {
+						$('#present').onclick = fuction(){
+							attendance[roll]=1;
+						}
+					}
+				}
 			  });
   		}
+		
+		var next = function(){
+			loopIndex++;
+			takeAttendance();
+		}
+		var previous = function(){
+			loopIndex--;
+			takeAttendance();
+		}
 	</script>
 	
 </body>
