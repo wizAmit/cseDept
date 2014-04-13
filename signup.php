@@ -1,5 +1,6 @@
 <?php 
-	require_once ( 'Google_Client.php');
+	set_include_path(get_include_path(). PATH_SEPARATOR . './resources/library/google-modified-api/src/');
+	require_once ('Google_Client.php');
 	require_once ( '\contrib\Google_Oauth2Service.php');
 	require_once ( '.\resources\config.php');	
 	
