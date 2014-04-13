@@ -6,5 +6,6 @@
 	else	{
 		//header('Location: /home.html');
 		echo 'Hello World!!';
+		echo 'from CSE Dept';
 	}
 ?>
