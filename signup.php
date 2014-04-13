@@ -17,7 +17,6 @@
 	//sessionkey to identify google token
 	$token_key = 'google_user_token';
 
-	echo (APP_NAME . "\n");
 	$client = new Google_Client();
   	$client->setApplicationName(APP_NAME);
   	$client->setDeveloperKey($developerCreds['Google_localhost']['developer_key']);
@@ -93,6 +92,7 @@
 		<script type="text/javascript" src="resources/library/jquery-1.11.0.min.js"></script>
 	</head>
 	<body>
+		<?php echo (APP_NAME . "\n"); ?>
 		<?php if($auth_url) : ?>
 		<div>	
 			<div>
