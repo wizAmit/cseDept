@@ -1,4 +1,11 @@
 <?php 
+<<<<<<< HEAD
+=======
+	//set_include_path(get_include_path(). PATH_SEPARATOR . './resources/library/google-modified-api/src/');
+	require_once 'resources\library\google-modified-api\src\Google_Client.php';
+	require_once 'resources\library\google-modified-api\src\contrib\Google_Oauth2Service.php');
+	require_once 'resources\config.php';	
+>>>>>>> master
 	
 	//set_include_path(get_include_path() . PATH_SEPARATOR . './resources/library/google-modified-api/src');
 	require_once ('resources\library\google-modified-api\src\Google_Client.php');
@@ -24,6 +31,7 @@
 	$client->setClientSecret($developerCreds['Google_localhost']['client_secret']);
 	$client->setRedirectUri($developerCreds['Google_localhost']['redirect_uris']);
 	$client->setScopes(array('https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/plus.me'));
+	$google_redirect_url = $developerCreds['Google_localhost']['redirect_uris'];
 
 	// if request is to logout then do it and redirect
 	if (isset($_REQUEST['logout']))
@@ -44,7 +52,7 @@
 
 		$_SESSION[$token_key] = $client->getAccessToken();
 
-		//header('Location: ' . filter_var($google_redirect_url, FILTER_SANITIZE_URL));
+		header('Location: ' . filter_var($google_redirect_url, FILTER_SANITIZE_URL));
 
 		exit;
 	}
@@ -89,7 +97,11 @@
 		<meta name="viewport" content="width=device-width">
 		<script type="text/javascript" src="js/detailForm.js"></script>
 		<link rel="stylesheet" type="text/css" href="./css/form.css" />
+<<<<<<< HEAD
 		<script type="text/javascript" src="resources/library/jquery-1.11.0.min.js"></script>
+=======
+		<script src="./resources/library/jquery-1.11.0.min.js"></script>
+>>>>>>> master
 	</head>
 	<body>
 		<?php echo (APP_NAME . "\n"); ?>
@@ -136,9 +148,14 @@
 			</div>
 			<?php endif; ?>
 		<script>
+			univRoll = $("#UnivRoll");
 			function setCookie() {	
+<<<<<<< HEAD
 				var univRoll = $("#UnivRoll");
 				document.cookie = "univRoll=" + univRoll.value + ";";
+=======
+				document.cookie = "univRoll=" + univRoll.val() + ";";
+>>>>>>> master
 			}
 		</script>
 	</body>
