@@ -1,17 +1,8 @@
-<?php 
-<<<<<<< HEAD
-=======
+<?php
 	//set_include_path(get_include_path(). PATH_SEPARATOR . './resources/library/google-modified-api/src/');
 	require_once 'resources\library\google-modified-api\src\Google_Client.php';
 	require_once 'resources\library\google-modified-api\src\contrib\Google_Oauth2Service.php');
 	require_once 'resources\config.php';	
->>>>>>> master
-	
-	//set_include_path(get_include_path() . PATH_SEPARATOR . './resources/library/google-modified-api/src');
-	require_once ('resources\library\google-modified-api\src\Google_Client.php');
-	require_once ('resources\library\google-modified-api\src\contrib\Google_Oauth2Service.php');
-	require_once ('resources\config.php');	
-	
 	
 	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) 
 		ob_start("ob_gzhandler"); 
@@ -150,12 +141,8 @@
 		<script>
 			univRoll = $("#UnivRoll");
 			function setCookie() {	
-<<<<<<< HEAD
 				var univRoll = $("#UnivRoll");
 				document.cookie = "univRoll=" + univRoll.value + ";";
-=======
-				document.cookie = "univRoll=" + univRoll.val() + ";";
->>>>>>> master
 			}
 		</script>
 	</body>
