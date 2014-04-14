@@ -1,0 +1,38 @@
+html,body{
+	margin: 0;
+	position: relative;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+/*	overflow: hidden;*/
+}
+
+/*for development purpose only*/
+div{
+	border: 2px solid gray;
+}
+
+header{
+	height: 15%;
+	width: 100%;
+	border-bottom: 1px black solid;
+	display: block;
+	box-shadow: 0px 1px 1px -1px #FFF inset;
+	background: linear-gradient(#738ABA, #2C4987)
+		repeat scroll 0% 0% transparent;
+}
+
+#left-pane{
+	position: relative;
+	float: left;
+	height: 100%;
+	width: 15%;
+	box-shadow: 
+}
+
+#right-pane{
+	position : relative;
+	float: right;
+	height: 100%;
+	width: 15%;
+}
