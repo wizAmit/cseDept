@@ -8,11 +8,14 @@
 		//echo 'Hello World!!';
 	}
 	
+	include "./header.php";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>
-		</title>
-	</head>
-</html>
+
+
+
+
+
+
+<?php
+	include "./footer.php";
+?>

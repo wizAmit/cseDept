@@ -4,8 +4,12 @@ html,body{
 	text-align: center;
 	height: 100%;
 	width: 100%;
-/*	overflow: hidden;*/
+	display: block;
+	/*overflow: hidden;*/
 }
+
+/*body { 
+	background-image: -o-linear-gradient(bottom, rgb(167,9,246) 11%,  rgb(194,242,242) 56%); background-image: -moz-linear-gradient(bottom, rgb(167,9,246) 11%,  rgb(194,242,242) 56%); background-image: -webkit-linear-gradient(bottom, rgb(167,9,246) 11%,  rgb(194,242,242) 56%); background-image: -ms-linear-gradient(bottom, rgb(167,9,246) 11%, rgb(194,242,242) 56 %); background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.11, rgb(167,9,246)), color-stop(0.56, rgb(194,242,242)) ); background-image: linear-gradient(to top, rgb(167,9,246) 11%, rgb(194,242,242)  56%); }*/
 
 /*for development purpose only*/
 div{
@@ -23,7 +27,7 @@ header{
 }
 
 #left-pane{
-	position: relative;
+	/*position: absolute;*/
 	float: left;
 	height: 100%;
 	width: 15%;
@@ -31,8 +35,49 @@ header{
 }
 
 #right-pane{
-	position : relative;
+	/*position: absolute;*/
 	float: right;
 	height: 100%;
 	width: 15%;
+	top: -4px;
+}
+
+.feature{
+	position: relative;
+	width: 120%;
+	height: 5%;
+	z-index: 1000000;
+}
+
+.feature-name{
+	margin-top: 4px;
+}
+
+.left{
+	left: -2%;	
+}
+
+.right{
+	left: -22%;
+}
+
+#feature1, #feature2{
+	top: 20%;
+}
+
+#feature3, #feature4{
+	top: 40%;
+}
+
+#content {
+	float: left;
+	width: 68%;
+	height: 100%;
+	margin-left: 0.5%;
+}
+
+input[type=checkbox],input[type=text] {
+	-webkit-transform: scale(1.6,1.6);
+	-moz-transform: scale(1.6,1.6);
+	-o-transform: scale(1.6,1.6);
 }

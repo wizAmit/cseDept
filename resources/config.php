@@ -7,24 +7,31 @@
     if something changes such as your database credentials, or a path to a specific resource,
     you'll only need to update it here.
 */
- 
+//require "./firephptest.php" ;
 $config = array(
     "db" => array(
-        "db1" => array(
-            "dbname" => "database1",
-            "username" => "dbUser",
-            "password" => "pa$$",
+        "student_details" => array(
+            "dbname" => "student_details",
+            "username" => "root",
+            "password" => "project",
             "host" => "localhost"
         ),
-        "db2" => array(
-            "dbname" => "database2",
-            "username" => "dbUser",
-            "password" => "pa$$",
+        "attendance" => array(
+            "dbname" => "attendance",
+            "username" => "root",
+            "password" => "project",
             "host" => "localhost"
-        )
+        ),
+		"marks" => array(
+            "dbname" => "marks",
+            "username" => "root",
+            "password" => "project",
+            "host" => "localhost"
+		)
     ),
     "urls" => array(
-        "baseUrl" => "http://example.com"
+        "baseUrl" => "http://example.com",
+		"errorUrl" => "../error.php"
     ),
     "paths" => array(
         "resources" => "/path/to/resources",
@@ -76,6 +83,10 @@ $developerCreds = array(
 		"client_secret" => "v0A9SbFflARWkRUMfiXznfOO",
 		"redirect_uris" => "https://csedept-wiz.rhcloud.com/Sandbox/signin/",
 		"api_key" => "AIzaSyClgERWIYvWLqG228vLUldNugc3LKImpdA"
+	),
+	"StackExchange" => array(
+		"client_id" => "mRh6PRRELThT*)IhZVWYNg((",
+		"api_key" => "nGP18g6TMlYxhvFuCJTwiQ(("
 	)
 );
  

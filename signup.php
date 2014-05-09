@@ -1,7 +1,7 @@
 <?php
 	//set_include_path(get_include_path(). PATH_SEPARATOR . './resources/library/google-modified-api/src/');
 	require_once 'resources\library\google-modified-api\src\Google_Client.php';
-	require_once 'resources\library\google-modified-api\src\contrib\Google_Oauth2Service.php');
+	require_once 'resources\library\google-modified-api\src\contrib\Google_Oauth2Service.php';
 	require_once 'resources\config.php';	
 	
 	if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip')) 
@@ -73,42 +73,22 @@
 	{
 		$auth_url = $client->createAuthUrl();
 	}
+	include './header-includes.php';
+	include './header.php';
 ?>
-
-<!DOCTYPE HTML>
-<html lang="en">
-	<head>
-		<title>
-			<?php if($auth_url) : ?>
-			Sign Up
-			<?php else : ?>
-				Welcome <?php echo $user_name; 
-				endif; ?>
-		</title>
-		<meta name="viewport" content="width=device-width">
-		<script type="text/javascript" src="js/detailForm.js"></script>
-		<link rel="stylesheet" type="text/css" href="./css/form.css" />
-<<<<<<< HEAD
-		<script type="text/javascript" src="resources/library/jquery-1.11.0.min.js"></script>
-=======
-		<script src="./resources/library/jquery-1.11.0.min.js"></script>
->>>>>>> master
-	</head>
-	<body>
-		<?php echo (APP_NAME . "\n"); ?>
+		<div class="container" style="margin-top: 2%;">
 		<?php if($auth_url) : ?>
-		<div>	
-			<div>
+		<div class="form-signin" style="position:fixed; top:7px; right:5px;">	
 				<input type="number" min="11500110000" step="1" id="UnivRoll" name="UniversityRollNo" pattern="\d{10,11}" 
-			   		title="Your 11 digit University Roll Number" placeholder="University Roll Number" maxlength="11" required 
-					   onblur="setCookie()" autofocus>
-			</div>
-			<div>
-				<a class="login" href="<?php echo $auth_url; ?>"><img src="img/google-login-button.png" alt="Sign in with Google" /></a>
-			</div>
+			   		title="Your 11 digit University Roll Number" placeholder="University Roll Number" maxlength="11" required
+					class="form-control" style="width:250px;" onkeyup="validate()">
+				<label id="name" style="display:none;" ondblclick="reset()"></label>
+				<a href="<?php echo $auth_url; ?>" id="gsignin" style="display:none;">
+					<img src="./img/google-login-button.png" alt="Sign-in with Google!!">
+				</a>
 		</div>
 		<?php else : ?>
-			<div>
+			<!--<div>
 				<table>
 					<tr>
 						<td>
@@ -127,23 +107,46 @@
 						</td>
 					</tr>
 				</table>
+			</div>-->
+			<div id="gplusPic" style="position: fixed; top: 50px; right: 50px;">
+				<img src="<?php echo $profile_image_url; ?>?sz=150" alt="Image" class="img-thumbnail" />
 			</div>
-			<div id="subForms" >
-				<div id="previous">
-					<a href="">Previous</a>
-				</div>
-				<?php include ('PersonalDetails.php'); ?>
-				<div id="next">
-					<a href="">Next</a>
-				</div>
-			</div>
+				<?php include './options.php'; ?>
 			<?php endif; ?>
+			</div>
 		<script>
-			univRoll = $("#UnivRoll");
+			var univRoll = $("#UnivRoll");
+			
+			var validate = function() {
+				var roll = $("#UnivRoll").val();
+				if (roll != ''){
+					if (roll.match(/\d{10,11}/)) {
+						$.post("./chkRoll.php", 
+				   			{"univRoll" : roll }, 
+				   function(data){
+							if (data.length>0){
+								$("#UnivRoll").fadeOut("slow");
+								$("#name").fadeIn("slow");
+								$("#name").html(data);
+								$("#gsignin").fadeIn("slow");
+								setcookie();
+							}
+				   		});
+					}
+					else
+						$("#gsignin").hide();
+				}
+			}
+			var reset = function(){
+				$("#name").fadeOut("slow");
+				$("#gsignin").fadeOut("slow");
+				$("#UnivRoll").fadeIn("slow");
+				$("#UnivRoll").val() = '';
+			}
 			function setCookie() {	
-				var univRoll = $("#UnivRoll");
-				document.cookie = "univRoll=" + univRoll.value + ";";
+				document.cookie = "univRoll=" + univRoll.value;
 			}
 		</script>
-	</body>
-</html>
+<?php
+	include "./footer.php";
+?>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blogs>
+	<SubCode id="HU801A/B">
+		<entry date="2014-05-06 14:21:00">
+			<title>Second Internals</title>
+			<description>Second Internals to be held on 2nd May,2014.</description>
+		</entry>
+	</SubCode>
+	<SubCode id="CS801A/B/C/D">
+		<entry date="2014-05-06 14:21:00">
+			<title>Second Internals</title>
+			<description>Second Internals to be held on 2nd May,2014.</description>
+		</entry>
+		<entry date="2014-05-06 10:21:00">
+			<title>Check Seatings</title>
+			<description>Check descriptions @ .</description>
+		</entry>
+	</SubCode>
+	<SubCode id="CS802E">
+		<entry date="2014-05-06 14:21:00">
+			<title>New Seminar</title>
+			<description></description>
+		</entry>
+	</SubCode>
+	<SubCode id="CS891">
+		<entry date="">
+			<title></title>
+			<description></description>
+		</entry>
+	</SubCode>
+	<SubCode id="CS892">
+		<entry date="">
+			<title></title>
+			<description></description>
+		</entry>
+	</SubCode>
+	<SubCode id="CS893">
+		<entry date="">
+			<title></title>
+			<description></description>
+		</entry>
+	</SubCode>
+
+</blogs>
