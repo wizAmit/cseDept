@@ -78,7 +78,7 @@
 ?>
 		<div class="container" style="margin-top: 2%;">
 		<?php if($auth_url) : ?>
-		<div class="form-signin" style="position:fixed; top:7px; right:5px;">	
+		<div class="form-signin" style="position:fixed; top:4px; right:5px;">	
 				<input type="number" min="11500110000" step="1" id="UnivRoll" name="UniversityRollNo" pattern="\d{10,11}" 
 			   		title="Your 11 digit University Roll Number" placeholder="University Roll Number" maxlength="11" required
 					class="form-control" style="width:250px;" onkeyup="validate()">
@@ -86,6 +86,10 @@
 				<a href="<?php echo $auth_url; ?>" id="gsignin" style="display:none;">
 					<img src="./img/google-login-button.png" alt="Sign-in with Google!!">
 				</a>
+		</div>
+		<div id="video" class="center-block">
+			<iframe width="640" height="360" src="//www.youtube.com/embed/mgooqyWMTxk" frameborder="0"
+					allowfullscreen></iframe>
 		</div>
 		<?php else : ?>
 			<!--<div>
@@ -108,8 +112,11 @@
 					</tr>
 				</table>
 			</div>-->
-			<div id="gplusPic" style="position: fixed; top: 50px; right: 50px;">
-				<img src="<?php echo $profile_image_url; ?>?sz=150" alt="Image" class="img-thumbnail" />
+			<div style="position: fixed; top: 50px; right: 50px;">
+				Welcome: <label id="name"></label>
+				<div id="gplusPic" >
+					<img src="<?php echo $profile_image_url; ?>?sz=150" alt="Image" class="img-thumbnail" />
+				</div>
 			</div>
 				<?php include './options.php'; ?>
 			<?php endif; ?>
@@ -123,28 +130,30 @@
 					if (roll.match(/\d{10,11}/)) {
 						$.post("./chkRoll.php", 
 				   			{"univRoll" : roll }, 
-				   function(data){
-							if (data.length>0){
+				   function(data){ 	
+					   document.cookie = "sem=" + data["Sem"];
+					   document.cookie = "univRoll=" + data["University Roll No"];
+					   if (Object.keys(data).length>0){
+								sessionStorage.setItem("name",data["FirstName"]);
+								sessionStorage.setItem("univRoll",data["University Roll No"]);
+								sessionStorage.setItem("sem",data["Sem"]);
+						   		localStorage.setItem("profile",JSON.stringify(data));
 								$("#UnivRoll").fadeOut("slow");
 								$("#name").fadeIn("slow");
-								$("#name").html(data);
+								$("#name").html(data["FirstName"]);
 								$("#gsignin").fadeIn("slow");
-								setcookie();
 							}
 				   		});
 					}
 					else
-						$("#gsignin").hide();
+						reset();
 				}
 			}
 			var reset = function(){
 				$("#name").fadeOut("slow");
 				$("#gsignin").fadeOut("slow");
 				$("#UnivRoll").fadeIn("slow");
-				$("#UnivRoll").val() = '';
-			}
-			function setCookie() {	
-				document.cookie = "univRoll=" + univRoll.value;
+				//$("#UnivRoll").val() = '';
 			}
 		</script>
 <?php

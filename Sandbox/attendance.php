@@ -121,6 +121,7 @@
 						$("ajaxRes").html(data);
 						$("#present").attr("hidden",false);
 						for (loopIndex in data) {
+							num_present_students = 0;
 							record = new Object();
 							record.rollNo = data[loopIndex][0];
 							record.present = 0;
@@ -226,6 +227,7 @@
 		var synchronize = function() {
 
 			var data = attendance;
+			var massBunk = 0;
 			var sec_abs;
 			if (section=='A')
 				sec_abs = 'B';
@@ -236,7 +238,7 @@
 			if(num_present_students < 1) {
 				var answer = confirm('Is this a MASS BUNK?');
 				if (answer)
-					$massBunk = 1;
+					massBunk = 1;
 				else
 					alert ('Nothing to upload.');
 			}
@@ -244,12 +246,14 @@
 			
 			$.post ("./uploadAttn.php",
 				{"value": JSON.stringify(data), "time" : datetime, "sec_Absent" : sec_abs, 
-				 "sem" : $("#sem").val(), "subCode" : $("#subCode").val(), massbunk : $massBunk},
+				 "sem" : $("#sem").val(), "subCode" : $("#subCode").val(), "massbunk" : massBunk},
 				function(result){
 					var res = (result);
 					$('#ajaxRes').append('<p>'+res+'Rows updated.</p>');
 					localStorage.clear();
-				});						
+				});
+			alert ("Successfully Updated!!");
+			window.reload();
 		}
 	</script>
 <?php

@@ -1,5 +1,5 @@
 <?php
-	include 'queryExeAttn.php';
+	require_once './queryExeAttn.php';
 
 	$sem = $_POST['sem'];
 	$secAbsent = $_POST['sec_Absent'];
@@ -39,7 +39,7 @@
 	
 	$dateTime = $_POST['time'];
 	
-	print (uploadAttendance(8,'CS803', $data_insert, $dateTime));
+	print (uploadAttendance($sem, $subCode, $data_insert, $dateTime));
 
 	function uploadAttendance($sem, $subCode, $data_ins, $date_ins){
 		

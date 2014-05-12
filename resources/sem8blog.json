@@ -1,9 +1,10 @@
+{
 "blogs" : {
 	"SubCode" : [
 		{	
 			"id"    : "HU801A/B",
 				"entry" : [
-					{"date" : 2014-05-08,
+					{"date" : "2014-05-08",
 					"title" : "Second Internals",
 					"desc"  : "Second Internals to be held on Date"
 					}
@@ -13,7 +14,7 @@
 			"id"    : "CS801A/B/C/D",
 			"entry" : [
 				{
-					"date"  : 2014-05-08, 
+					"date"  : "2014-05-08", 
 				 	"title" : "Second Internals",
 				 	"desc"  : "Second Internals to be held on Date"
 				}
@@ -23,7 +24,7 @@
 			"id"    : "CS802E",
 			"entry" : [
 				{
-					"date"  : 2014-05-08, 
+					"date"  : "2014-05-08", 
 				 	"title" : "Second Internals",
 				 	"desc"  : "Second Internals to be held on Date"
 				}
@@ -33,7 +34,7 @@
 			"id"    : "CS803",
 			"entry" : [
 				{
-					"date"  : 2014-05-08, 
+					"date"  : "2014-05-08", 
 				 	"title" : "Second Internals",
 				 	"desc"  : "Second Internals to be held on Date"
 				}
@@ -43,7 +44,7 @@
 			"id"    : "CS891",
 			"entry" : [
 				{
-					"date"  : 2014-05-08, 
+					"date"  : "2014-05-08", 
 				 	"title" : "Second Internals",
 				 	"desc"  : "Second Internals to be held on Date"
 				}
@@ -53,7 +54,7 @@
 			"id"    : "CS892",
 			"entry" : [
 				{
-					"date"  : 2014-05-08, 
+					"date"  : "2014-05-08", 
 				 	"title" : "Second Internals",
 				 	"desc"  : "Second Internals to be held on Date"
 				}
@@ -63,11 +64,12 @@
 			"id"    : "CS893",
 			"entry" : [
 				{
-					"date"  : 2014-05-08, 
+					"date"  : "2014-05-08", 
 				 	"title" : "Second Internals",
 				 	"desc"  : "Second Internals to be held on Date"
 				}
 			]
 		}
 	]
+}
 }

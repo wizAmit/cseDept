@@ -5,6 +5,7 @@ html,body{
 	height: 100%;
 	width: 100%;
 	display: block;
+	background-color: #F4F3F2;
 	/*overflow: hidden;*/
 }
 
@@ -12,9 +13,9 @@ html,body{
 	background-image: -o-linear-gradient(bottom, rgb(167,9,246) 11%,  rgb(194,242,242) 56%); background-image: -moz-linear-gradient(bottom, rgb(167,9,246) 11%,  rgb(194,242,242) 56%); background-image: -webkit-linear-gradient(bottom, rgb(167,9,246) 11%,  rgb(194,242,242) 56%); background-image: -ms-linear-gradient(bottom, rgb(167,9,246) 11%, rgb(194,242,242) 56 %); background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.11, rgb(167,9,246)), color-stop(0.56, rgb(194,242,242)) ); background-image: linear-gradient(to top, rgb(167,9,246) 11%, rgb(194,242,242)  56%); }*/
 
 /*for development purpose only*/
-div{
+/*div{
 	border: 2px solid gray;
-}
+}*/
 
 header{
 	height: 15%;

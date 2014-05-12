@@ -1,8 +1,8 @@
 <?php
-	//include './header.php';
-	include './getMarks.php';
-	$sem = $_GET['sem'];
-	$subCodes = retrieveSubjectHeaders($sem);
+	require_once './getMarks.php';
+	$sem = $_COOKIE['sem'];
+	$db = setDb("marks");
+	$subCodes = retrieveSubjectHeaders($db,$sem);
 	/*foreach ($subCodes as $subject){
 		print $subject['SubCode'] . " " . $subject['SubName'] . "<br>";
 	}*/
